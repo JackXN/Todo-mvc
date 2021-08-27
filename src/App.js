@@ -7,14 +7,14 @@ import React, {useState} from 'react';
 
 function App() {
   const [input, setInput] = useState('')
-  const [todos, setTodos] = ([]);
-  
+  const [todos, setTodos] = useState([]);
+
   return (
     <>
     <h1>Text</h1>
 
     {/* Setting the prop value */}
-<TodoForm setInput={setInput}/>
+<TodoForm setInput={setInput} setTodos={setTodos} todos={todos} input={input}/>
     </>
   );
 }

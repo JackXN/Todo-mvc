@@ -17,7 +17,7 @@ justify-content:center;
 
 
 
-function TodoForm( {setInput} ) {
+function TodoForm( {setInput, todos, setTodos, input} ) {
 
 
     //HANDLER FUNCTIONS
@@ -26,29 +26,28 @@ const handleChange = e => {
     setInput(e.target.value);
    setInput(e.target.value);
     // console.log(e.target.value);
-
-
-
-
 }
 
-
-
     const handleSubmit = (e) => {
-
         //? prevents browser reload on form submit
         e.preventDefault();
+        setTodos([...todos, {text:input, completed:false, id:Math.random() * 1000}])
     
      // setInput to empty strings on submit
 //     setInput('')
-//  console.log(input)
+ console.log(e.target.value)
     }
 
+    const handleSubmitOnEnter = e => {
+        // if keylog is 13 (enter) => run the handleSubmit function
+        if(e.keyCode === 13) {
+            handleSubmit()  }
+        }
 
     return (
         <FormContainer>
         <div className='form-container'>
-            <form className='todo-form' onSubmit={handleSubmit} >
+            <form className='todo-form' onSubmit={handleSubmitOnEnter} >
         <input type='text' placeholder='Add something to your long list of things to do..' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit}></input>
         <select name='todos'>
             <option value='all'>All</option>
