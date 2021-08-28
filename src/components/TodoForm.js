@@ -17,7 +17,7 @@ justify-content:center;
 
 
 
-function TodoForm( {setInput, todos, setTodos, input} ) {
+function TodoForm( {setInput, todos, setTodos, input, setStatus} ) {
 
 
     //HANDLER FUNCTIONS
@@ -54,6 +54,7 @@ const handleChange = e => {
 
 const statusHandler = (e) => {
     console.log(e.target.value)
+    setStatus(e.target.value);
 }
 
     return (
