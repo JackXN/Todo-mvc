@@ -49,12 +49,19 @@ const handleChange = e => {
     //         handleSubmit()  }
     //     }
 
+
+
+
+const statusHandler = (e) => {
+    console.log(e.target.value)
+}
+
     return (
         <FormContainer>
         <div className='form-container'>
             <form className='todo-form' onSubmit={handleSubmit} >
         <input type='text' placeholder='Add something to your long list of things to do..' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit} value={input}></input>
-        <select name='todos'>
+        <select onChange={statusHandler}name='todos'>
             <option value='all'>All</option>
             <option value='completed'>Completed</option>
             <option value='uncompleted'>Uncompleted</option>
