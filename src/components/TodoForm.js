@@ -53,7 +53,7 @@ setStatus(e.target.value);
         name='todos'>
             <option value='all'>All</option>
             <option value='completed'>Completed</option>
-            <option value='Active'>Active</option>
+            <option value='active'>Active</option>
         </select>
             </form>
         </div>

@@ -11,23 +11,28 @@ function App() {
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
 
+// Run the filterHandler() when todos,status re-render
+useEffect(() => {
+filterHandler();
+}, [todos,status])
+
 
 const filterHandler = () => {
   switch(status){
+    //? Filter out the completed todos
     case 'completed':
      setFilteredTodos(todos.filter(todo => todo.completed === true))
      break;
+     //? Filter out the active todos
      case 'active':
        setFilteredTodos(todos.filter(todo => todo.completed === false));
        break;
+       //? Set a default value for every todo regardless of status 
        default:
          setFilteredTodos(todos)
          break;
   }
 }
-
-
-
 
   return (
     <div className='App'>
