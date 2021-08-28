@@ -3,7 +3,7 @@ import './App.css';
 import TodoForm from './components/TodoForm';
 import List from './components/List';
 import React, {useState, useEffect} from 'react';
-import Todo from './components/Todo'
+import Todo from './components/Todo';
 
 function App() {
   const [input, setInput] = useState('');
@@ -49,8 +49,11 @@ console.log(filteredTodos)
 <TodoForm setInput={setInput} 
 setTodos={setTodos} 
 todos={todos} input={input} 
-setStatus={setStatus} />
-<List todos={todos} setTodos={setTodos} filteredTodos={filteredTodos}/>
+setStatus={setStatus}/>
+
+<List todos={todos} 
+setTodos={setTodos} 
+filteredTodos={filteredTodos}/>
 </div>
 </div>
   );

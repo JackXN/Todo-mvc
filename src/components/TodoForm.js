@@ -29,12 +29,6 @@ const handleChange = e => {
      //Clear the input once the form has been submitted
      setInput('');
     }
-
-   
-
-
-    
-
     // const handleSubmitOnEnter = e => {
     //     // if keystroke is 13 (enter) => run the handleSubmit function
     //     if(e.keyCode === 13) {
@@ -45,8 +39,9 @@ const handleChange = e => {
 
 
 const statusHandler = (e) => {
-    console.log(e.target.value)
-    setStatus(e.target.value);
+console.log(e.target.value)
+//Set the state of the value of the select box
+setStatus(e.target.value);
 }
 
     return (
@@ -54,10 +49,11 @@ const statusHandler = (e) => {
         <div className='form-container'>
             <form className='todo-form' onSubmit={handleSubmit} >
         <input type='text' placeholder='Add something to your long list of things to do..' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit} value={input}></input>
-        <select onChange={statusHandler}name='todos'>
+        <select onChange={statusHandler} 
+        name='todos'>
             <option value='all'>All</option>
-            <option value='completed'>Active</option>
-            <option value='uncompleted'>Completed</option>
+            <option value='completed'>Completed</option>
+            <option value='Active'>Active</option>
         </select>
             </form>
         </div>

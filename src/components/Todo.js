@@ -11,18 +11,16 @@ function Todo( { text, todo, todos, setTodos } ) {
 const deleteHandler = () => {
 //Filter the state and find element that matches the element i clicked on
 setTodos(todos.filter(el => el.id !== todo.id)); // Compare the element im clicking on to match the one from state
-
 // console.log(todo)
 }
 
 const completeHandler = () => {
-    setTodos(todos.map((item) => {
+    setTodos(todos.map(item => {
         if(item.id === todo.id) {
             return {
                 ...item, completed: !item.completed
             }
         }
-        //incase it does not match just return whatever it wants
         return item;
     }))
 }
@@ -31,7 +29,7 @@ const completeHandler = () => {
     return (
         <div className='todo-container'>
             {/* If the status is completed then give it a class  */}
-        <li className={`todo-item ${todos.completed ? 'completed' : '' }`}>{text}</li>
+        <li className={`todo-item ${todo.completed ? 'completed' : '' }`}>{text}</li>
         <div className='button-container'>
         <button onClick={completeHandler} id='complete'><AiFillCheckCircle/></button>
         <button onClick={deleteHandler} id='trash'><BsFillTrash2Fill/></button>

@@ -1,3 +1,7 @@
 .completed {
-color: red;
+color: red !important;
+}
+
+.todo-item {
+    color: red;
 }

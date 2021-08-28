@@ -44,3 +44,12 @@ button {
     background: red;
     border: none;
 }
+
+.todo-item {
+    color: red;
+}
+
+.completed {
+text-decoration: line-through;
+color:gray;
+}
