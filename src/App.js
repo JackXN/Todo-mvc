@@ -15,7 +15,7 @@ function App() {
 useEffect(() => {
 // console.log('test');
 filterHandler();
-}, [todos,status]) //Run only once when the component is rendered)
+}, [todos]) //Run only once when the component is rendered)
 
 
 
