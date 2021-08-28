@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Todo from './Todo'
-
+import "./Styling/List.css";
 
 function List( { todos , setTodos, filteredTodos} ) {
 

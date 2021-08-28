@@ -1,12 +1,12 @@
 .App {
   text-align: center;
-
-
+  font-family: 'New Rocker', cursive;
+color: #848884;
 }
 
 
 body{
-  background: #61dafb;
+  background: #333239;
 }
 
 .App-logo {

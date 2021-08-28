@@ -14,13 +14,17 @@
         width: 450px;
         text-align: center;
         border: none;
+        background: rgba(38,43,45, 0.5);
+        font-family: 'New Rocker', cursive;
+        
     }
-
     .form-container select {
         border: none;
         margin: 20px;
         height: 20px;   
         text-align: center;
+        background: rgba(38,43,45, 0.5);
+        color: #848884;
     }
 
     .wrapper {
