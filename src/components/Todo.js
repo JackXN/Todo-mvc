@@ -1,7 +1,7 @@
 import React from 'react'
 import {AiFillCheckCircle} from 'react-icons/ai';
 import {BsFillTrash2Fill} from 'react-icons/bs';
-import "./todo.css"
+import "./Styling/Todo.css"
 
 
 
@@ -27,11 +27,13 @@ const completeHandler = () => {
 
 
     return (
-        <div>
+        <div className='todo-container'>
             {/* If the status is completed then give it a class  */}
         <li className={`todo-item ${todo.completed ? 'completed' : '' }`}>{text}</li>
-        <button onClick={completeHandler}><AiFillCheckCircle/></button>
-        <button onClick={deleteHandler}><BsFillTrash2Fill/></button>
+        <div className='button-container'>
+        <button onClick={completeHandler} id='complete'><AiFillCheckCircle/></button>
+        <button onClick={deleteHandler} id='trash'><BsFillTrash2Fill/></button>
+        </div>
         </div>
     )
 }

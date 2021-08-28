@@ -1,0 +1,46 @@
+ul {
+    list-style-type: none;
+}
+
+
+.todo-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border: solid white 1px;
+    align-items: center;
+    height:50px;
+    width: 300px;
+    padding: 30px;
+}
+
+.todo-container li {
+font-size:40px;
+margin-top: 20px;
+}
+
+button {
+    margin: 10px;
+    font-size: 25px;
+    margin-top: 0;
+    margin-top: -10px;
+    cursor: pointer;
+}
+
+.button-container {
+    padding: 20px;
+}
+
+#complete {
+    color: green;
+    background: green;
+    color: white;
+    border: none;
+}
+
+#trash {
+    color: white;
+    background: red;
+    border: none;
+}
