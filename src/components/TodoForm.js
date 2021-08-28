@@ -48,7 +48,7 @@ setStatus(e.target.value);
         <div className='wrapper'>
         <div className='form-container'>
             <form className='todo-form' onSubmit={handleSubmit} >
-        <input type='text' placeholder='Add something to your long list of things to do..' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit} value={input}></input>
+        <input type='text' placeholder='...' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit} value={input}></input>
         <select onChange={statusHandler} 
         name='todos'>
             <option value='all'>All</option>

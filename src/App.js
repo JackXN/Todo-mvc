@@ -35,11 +35,13 @@ const filterHandler = () => {
 }
 
   return (
+    <div className='app-container'>
     <div className='App'>
-      
+      <div className='form-layer'>
+    <div className='form-layout'>
     <h1>Tinkers Todo List
     </h1>
-    <div className='form-layout'>
+
     {/* Setting the prop values */}
 <TodoForm setInput={setInput} 
 setTodos={setTodos} 
@@ -49,6 +51,8 @@ setStatus={setStatus}/>
 <List todos={todos} 
 setTodos={setTodos} 
 filteredTodos={filteredTodos}/>
+</div>
+</div>
 </div>
 </div>
   );
