@@ -15,7 +15,7 @@ function App() {
     </h1>
     {/* Setting the prop value */}
 <TodoForm setInput={setInput} setTodos={setTodos} todos={todos} input={input}/>
-<List todos={todos}/>
+<List todos={todos} setTodos={setTodos}/>
 
     </>
   );
