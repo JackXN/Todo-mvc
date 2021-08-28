@@ -1,23 +1,24 @@
 import React, {useState} from 'react'
 import styled from 'styled-components';
+import Todo from './Todo'
 
 
-function List() {
+function List( {todos } ) {
 
-const [todos, setTodos] = useState([]);
-
-
-const ListContainer = styled.div`
-
-
-`
-
-
+console.log(todos)
     return (
-        <ListContainer>
+<div className='list-container'>
+<ul className='todo-list'>
+{todos.map(todo => {
+    (
+        <Todo/>
+    )
+})}
 
-            
-        </ListContainer>
+</ul>
+
+
+</div>
     )
 }
 

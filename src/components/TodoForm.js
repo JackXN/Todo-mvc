@@ -32,23 +32,27 @@ const handleChange = e => {
         //? prevents browser reload on form submit
         e.preventDefault();
         //Creates the objects with the required properties
-        setTodos([...todos, {text:input, completed: false, id: Math.random() * 1000}])
-    
-     // setInput to empty strings on submit
-    setInput('')
-// console.log('test')
+        setTodos([...todos, {text:input, completed: false }])
+
+     //Clear the input once the form has been submitted
+     setInput('');
     }
 
-    const handleSubmitOnEnter = e => {
-        // if keystroke is 13 (enter) => run the handleSubmit function
-        if(e.keyCode === 13) {
-            handleSubmit()  }
-        }
+   
+// console.log('test')
+
+    
+
+    // const handleSubmitOnEnter = e => {
+    //     // if keystroke is 13 (enter) => run the handleSubmit function
+    //     if(e.keyCode === 13) {
+    //         handleSubmit()  }
+    //     }
 
     return (
         <FormContainer>
         <div className='form-container'>
-            <form className='todo-form' onSubmit={handleSubmitOnEnter} >
+            <form className='todo-form' onSubmit={handleSubmit} >
         <input type='text' placeholder='Add something to your long list of things to do..' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit} value={input}></input>
         <select name='todos'>
             <option value='all'>All</option>
