@@ -20,11 +20,14 @@ switch(status) {
   break;
 //? Create another switch statement for 'uncompleted' and 'completeed'
 case: 'uncompleted';
-setFilteredTodos(todos.filter(todo => todo.uncompleted === true));
+setFilteredTodos(todos.filter(todo => todo.uncompleted === false));
 break;
-case: 'all';
-setFilteredTodos(todos.filter(todo => todo.all === true));
+//? Default Case
+default: 
+setFilteredTodos(todos);
 break;
+
+
 
 
 }
