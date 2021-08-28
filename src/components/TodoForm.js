@@ -64,8 +64,8 @@ const statusHandler = (e) => {
         <input type='text' placeholder='Add something to your long list of things to do..' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit} value={input}></input>
         <select onChange={statusHandler}name='todos'>
             <option value='all'>All</option>
-            <option value='completed'>Completed</option>
-            <option value='uncompleted'>Uncompleted</option>
+            <option value='completed'>Active</option>
+            <option value='uncompleted'>Completed</option>
         </select>
             </form>
         </div>
