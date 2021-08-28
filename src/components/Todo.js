@@ -5,11 +5,11 @@ import {BsFillTrash2Fill} from 'react-icons/bs';
 
 
 
-function Todo() {
+function Todo( { text } ) {
 
     return (
         <div>
-        <li className='todo-item'>random</li>
+        <li className='todo-item'>{text}</li>
         <button><AiFillCheckCircle/></button>
         <button><BsFillTrash2Fill/></button>
         </div>

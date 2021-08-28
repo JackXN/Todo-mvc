@@ -28,18 +28,18 @@ const handleChange = e => {
     // console.log(e.target.value);
 }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
         //? prevents browser reload on form submit
         e.preventDefault();
         //Creates the objects with the required properties
-        setTodos([...todos, {text:input, completed: false }])
+        setTodos([...todos, {text:input, completed: false, id: Math.random() * 1000 }])
 
      //Clear the input once the form has been submitted
      setInput('');
     }
 
    
-// console.log('test')
+
 
     
 
