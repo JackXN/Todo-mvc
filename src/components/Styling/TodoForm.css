@@ -1,0 +1,31 @@
+/* .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background: red;
+} */
+    
+    .form-container input{
+        height: 20px;
+        border-radius: 50px;
+        padding: 20px;
+        width: 450px;
+        text-align: center;
+        border: none;
+    }
+
+    .form-container select {
+        border: none;
+        margin: 20px;
+        height: 20px;   
+        text-align: center;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+

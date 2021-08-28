@@ -10,8 +10,7 @@ function Todo( { text,todo, todos, setTodos } ) {
 const deleteHandler = () => {
 //Filter the state and find element that matches the element i clicked on
 setTodos(todos.filter((element) => element.id !== todos.id));
-
-console.log(todo)
+console.log(todo);
 }
 
 const completeHandler = () => {

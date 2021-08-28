@@ -40,16 +40,19 @@ break;
 }
 console.log(filteredTodos)
   return (
-    <>
-    <h1>Todo App
+    <div className='App'>
+      
+    <h1>Tinkers Todo List
     </h1>
+    <div className='form-layout'>
     {/* Setting the prop values */}
 <TodoForm setInput={setInput} 
 setTodos={setTodos} 
 todos={todos} input={input} 
 setStatus={setStatus} />
 <List todos={todos} setTodos={setTodos} filteredTodos={filteredTodos}/>
-    </>
+</div>
+</div>
   );
 }
 

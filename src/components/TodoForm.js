@@ -1,18 +1,10 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, {useState} from 'react'
-import styled from 'styled-components'
+import "./Styling/TodoForm.css";
 
 
 
-
-
-const FormContainer = styled.div`
-display:flex;
-flex-direction:row;
-align-items:center;
-justify-content:center;
-`
 
 
 
@@ -58,7 +50,7 @@ const statusHandler = (e) => {
 }
 
     return (
-        <FormContainer>
+        <div className='wrapper'>
         <div className='form-container'>
             <form className='todo-form' onSubmit={handleSubmit} >
         <input type='text' placeholder='Add something to your long list of things to do..' name='text' className='todo-input' onChange={handleChange} onSubmit={handleSubmit} value={input}></input>
@@ -69,7 +61,8 @@ const statusHandler = (e) => {
         </select>
             </form>
         </div>
-        </FormContainer>
+        </div>
+
     )
 }
 
