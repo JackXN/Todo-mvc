@@ -11,34 +11,24 @@ function App() {
   const [status, setStatus] = useState('all');
   const [filteredTodos, setFilteredTodos] = useState([]);
 
-// Run this sideEffect on mount 
-useEffect(() => {
-// console.log('test');
-filterHandler();
-}, [todos]) //Run only once when the component is rendered)
-
-
-
 
 const filterHandler = () => {
-switch(status) {
-  //? Filter out the compelted todos
-  case'completed':
-  setFilteredTodos(todos.filter(todo => todo.completed === true));
-  // ? Break
-  break;
-//? Create another switch statement for 'uncompleted' and 'completeed'
-case 'uncompleted':
-setFilteredTodos(todos.filter(todo => todo.completed === false));
-break;
-//? Default Case
-default: 
-setFilteredTodos(todos);
-break;
+  switch(status){
+    case 'completed':
+     setFilteredTodos(todos.filter(todo => todo.completed === true))
+     break;
+     case 'active':
+       setFilteredTodos(todos.filter(todo => todo.completed === false));
+       break;
+       default:
+         setFilteredTodos(todos)
+         break;
+  }
 }
 
-}
-console.log(filteredTodos)
+
+
+
   return (
     <div className='App'>
       
