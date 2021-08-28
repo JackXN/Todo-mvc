@@ -29,6 +29,7 @@ const completeHandler = () => {
 
     return (
         <div>
+            {/* If the status is completed then give it a class  */}
         <li className={`todo-item ${todo.completed ? 'completed' : '' }`}>{text}</li>
         <button onClick={completeHandler}><AiFillCheckCircle/></button>
         <button onClick={deleteHandler}><BsFillTrash2Fill/></button>
