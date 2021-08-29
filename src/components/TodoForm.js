@@ -8,7 +8,6 @@ function TodoForm({ setInput, todos, setTodos, input, setStatus }) {
   const handleChange = (e) => {
     //? Allowes me to change the value of the input
     setInput(e.target.value);
-    setInput(e.target.value);
     // console.log(e.target.value);
   };
 
