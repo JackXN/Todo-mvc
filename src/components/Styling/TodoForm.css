@@ -19,6 +19,8 @@ flex-direction: column;
     width: 100%;
     display: flex;
     margin-top: 20px;
+    border: none;
+  
 }
 
 .form-container input {
@@ -28,6 +30,7 @@ flex-direction: column;
     padding-top: 0;
     padding-bottom: 0;
     height: 50px;
+    border: none;
 }
 
 .todo-item-container {
