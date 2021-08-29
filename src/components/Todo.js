@@ -35,10 +35,10 @@ function Todo({ text, todo, todos, setTodos }) {
         </li>
       </div>
       <div className="button-container">
-        <button onClick={completeHandler} id="complete">
+        <button aria-label='Complete' onClick={completeHandler} id="complete">
           <AiFillCheckCircle />
         </button>
-        <button onClick={deleteHandler} id="trash">
+        <button aria-label='Delete' onClick={deleteHandler} id="trash">
           <BsFillTrash2Fill />
         </button>
       </div>
