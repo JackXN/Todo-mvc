@@ -6,7 +6,8 @@ import "./Styling/Todo.css"
 
 
 function Todo( { text, todo, todos, setTodos } ) {
-// Events
+
+//!Events
 
 const deleteHandler = () => {
 //Filter the state and find element that matches the element i clicked on
@@ -20,16 +21,23 @@ const completeHandler = () => {
             return {
                 ...item, completed: !item.completed
             }
+
         }
         return item;
     }))
 }
 
 
+
+
+
+
     return (
         <div className='todo-container'>
             {/* If the status is completed then give it a class  */}
+            <div className='todo-item-container'>
         <li className={`todo-item ${todo.completed ? 'completed' : '' }`}>{text}</li>
+        </div>
         <div className='button-container'>
         <button onClick={completeHandler} id='complete'><AiFillCheckCircle/></button>
         <button onClick={deleteHandler} id='trash'><BsFillTrash2Fill/></button>
