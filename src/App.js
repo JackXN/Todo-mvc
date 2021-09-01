@@ -2,15 +2,66 @@ import "./App.css";
 import TodoForm from "./components/TodoForm";
 import List from "./components/List";
 import React, { useState, useEffect } from "react";
-
+import axios from 'axios';
 
 function App() {
   const [input, setInput] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState("all");
   const [filteredTodos, setFilteredTodos] = useState([]);
+  const [mewTwo, setMewTwo] = useState([]);
 
-  // Run the filterHandler() when todos,status re-render
+
+
+
+useEffect(() => {
+  async function fetchData() {
+  fetch('http://arch.bugfoot.net:8080/api/rest/todos', {
+    method: 'GET',
+    headers: {['x-hasura-user-id']: '257368db-79b8-4948-bf64-6fef2a764f5e'}
+  })
+.then((res) => res.json())
+.then(setMewTwo)
+.catch((error) => {
+  console.log(error)
+})
+}
+fetchData();
+}, [])
+
+
+
+
+
+
+
+  // const Api = axios.create({
+  //   baseURL: `http://arch.bugfoot.net:8080/api/rest/`
+  // })
+
+
+
+// useEffect(() => {
+//  async function fetchData() {
+//    const result = await Api.get('/todos')
+//    .then(console.log)
+//  }
+//  fetchData();
+// }, [])
+
+
+
+
+
+
+
+
+
+
+
+
+
+  //! Run the filterHandler() when todos,status re-render
   useEffect(() => {
     filterHandler();
   }, [todos, status]);
@@ -31,6 +82,9 @@ function App() {
         break;
     }
   };
+
+
+
 
   return (
     <div className="app-container">
